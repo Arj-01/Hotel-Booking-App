@@ -18,13 +18,13 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const userRoutes = require("./routes/users");
 const campgroundRoutes = require("./routes/campgrounds");
+
 const reviewRoutes = require("./routes/reviews");
 
 const MongoDBStore = require("connect-mongo")(session);
 
 const dbUrl =
-  "mongodb+srv://arj_01:learnmongodb@cluster0.tpisghq.mongodb.net/yelpcamp?retryWrites=true&w=majority";
-
+  "mongodb+srv://arj_01:learnmongodb@cluster0.tpisghq.mongodb.net/tourbook?retryWrites=true&w=majority";
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
